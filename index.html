@@ -1,1 +1,316 @@
-<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <link href=\"https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css\" rel=\"stylesheet\">\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css\">\n    <title>Premium Portfolio</title>\n</head>\n<body class=\"bg-gray-900 text-white\">\n    <header class=\"p-6 flex justify-between items-center\">\n        <h1 class=\"text-4xl font-bold\">Premium Portfolio</h1>\n        <nav>\n            <ul class=\"flex space-x-4\">\n                <li><a href=\"#case-studies\" class=\"hover:underline\">Case Studies</a></li>\n                <li><a href=\"#tech-projects\" class=\"hover:underline\">Tech Projects</a></li>\n                <li><a href=\"#investment-banking\" class=\"hover:underline\">Investment Banking Readiness</a></li>\n            </ul>\n        </nav>\n    </header>\n    <main class=\"p-6\">\n        <section id=\"case-studies\" class=\"mb-10\">\n            <h2 class=\"text-3xl font-bold mb-4\">Case Studies</h2>\n            <div class=\"grid grid-cols-1 md:grid-cols-2 gap-4\">\n                <!-- Repeat this block for each case study -->\n                <div class=\"bg-gray-800 p-4 rounded shadow\">\n                    <h3 class=\"font-semibold\">Case Study Title</h3>\n                    <p>Details about the case study with quantified impact.</p>\n                    <p>Impact: $XX million in savings or 500 hours saved.</p>\n                </div>\n            </div>\n        </section>\n        <section id=\"tech-projects\" class=\"mb-10\">\n            <h2 class=\"text-3xl font-bold mb-4\">Tech Projects</h2>\n            <ul class=\"list-disc pl-6\">\n                <li><a href=\"project1.html\" class=\"hover:underline\">Tech Project 1</a> - Brief description</li>\n                <li><a href=\"project2.html\" class=\"hover:underline\">Tech Project 2</a> - Brief description</li>\n                <!-- Add more projects as needed -->\n            </ul>\n        </section>\n        <section id=\"investment-banking\" class=\"mb-10\">\n            <h2 class=\"text-3xl font-bold mb-4\">Investment Banking Readiness</h2>\n            <p>Details about readiness and key skills.</p>\n        </section>\n        <section id=\"advanced-toolkit\" class=\"mb-10\">\n            <h2 class=\"text-3xl font-bold mb-4\">Advanced Toolkit</h2>\n            <p>Overview of advanced tools and technologies used.</p>\n        </section>\n    </main>\n    <footer class=\"p-6 bg-gray-800 text-center\">\n        <p class=\"mb-4\">Download my technical portfolio: <a href=\"portfolio.pdf\" class=\"text-blue-400 hover:underline\">Download</a></p>\n        <p>Connect with me on LinkedIn: <a href=\"https://www.linkedin.com/in/everrubio/\" class=\"text-blue-400 hover:underline\">LinkedIn Profile</a></p>\n    </footer>\n</body>\n</html>\n
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>José Ever Rubio | Analista Financiero & Riesgo</title>
+    <meta name="description" content="Portafolio profesional de José Ever Rubio Villalpando. Especialista en finanzas corporativas, análisis de riesgo crediticio y data science.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            light: '#e0f2fe',
+                            DEFAULT: '#0ea5e9',
+                            dark: '#0284c7',
+                            accent: '#10b981'
+                        },
+                        dark: {
+                            bg: '#0f172a',
+                            card: '#1e293b',
+                            border: '#334155'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .glass-effect {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #0ea5e9;
+        }
+    </style>
+</head>
+<body class="bg-dark-bg text-slate-300 font-sans antialiased selection:bg-brand-DEFAULT selection:text-white">
+
+    <!-- Navegación Sticky -->
+    <nav class="fixed w-full z-50 glass-effect transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-2xl font-bold text-white tracking-tighter">Ever<span class="text-brand-DEFAULT">.Rubio</span></a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#inicio" class="hover:text-brand-DEFAULT text-sm font-medium transition-colors">Inicio</a>
+                        <a href="#casos-exito" class="hover:text-brand-DEFAULT text-sm font-medium transition-colors">Casos</a>
+                        <a href="#proyectos" class="hover:text-brand-DEFAULT text-sm font-medium transition-colors">Proyectos</a>
+                        <a href="#experiencia" class="hover:text-brand-DEFAULT text-sm font-medium transition-colors">Experiencia</a>
+                        <a href="#contacto" class="bg-brand-DEFAULT text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-brand-dark transition-colors shadow-[0_0_15px_rgba(14,165,233,0.4)]">Contáctame</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-brand-DEFAULT opacity-20 rounded-full mix-blend-screen filter blur-[100px] animate-pulse"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-brand-accent opacity-10 rounded-full mix-blend-screen filter blur-[100px]"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center md:text-left md:w-2/3 fade-in-up">
+                <span class="text-brand-accent font-semibold tracking-wider uppercase text-sm mb-4 block">📊 Finanzas Corporativas & Data Science</span>
+                <h1 class="text-4xl tracking-tight font-extrabold text-white sm:text-5xl md:text-6xl mb-6">
+                    Traduciendo datos complejos en <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-DEFAULT to-brand-accent">decisiones rentables.</span>
+                </h1>
+                <p class="mt-3 text-base text-slate-400 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl mb-8">
+                    Especialista en modelado financiero, gestión de riesgo crediticio y control presupuestal. Fusiono rigor analítico con Python, SQL y Power BI para maximizar ROI.
+                </p>
+                <div class="mt-5 sm:mt-8 flex flex-col sm:flex-row gap-4 md:justify-start justify-center">
+                    <a href="#casos-exito" class="px-8 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-brand-DEFAULT hover:bg-brand-dark transition-colors md:py-4 md:text-lg">
+                        Ver Casos de Éxito
+                    </a>
+                    <a href="https://www.linkedin.com/in/EverRubio" target="_blank" class="px-8 py-3 border border-dark-border text-base font-medium rounded-lg text-white bg-dark-card hover:bg-slate-800 transition-colors md:py-4 md:text-lg flex items-center justify-center gap-2">
+                        <i class="fab fa-linkedin text-[#0A66C2]"></i> LinkedIn
+                    </a>
+                </div>
+            </div>
+
+            <!-- KPI Cards -->
+            <div class="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-3 fade-in-up">
+                <div class="bg-dark-card rounded-xl p-6 border border-dark-border shadow-lg hover:border-brand-DEFAULT transition-all cursor-pointer">
+                    <div class="text-brand-DEFAULT mb-2"><i class="fas fa-chart-line fa-2x"></i></div>
+                    <h3 class="text-3xl font-bold text-white mb-1">$5.1 MDP</h3>
+                    <p class="text-sm text-slate-400">Cartera gestionada con 0% PAR</p>
+                </div>
+                <div class="bg-dark-card rounded-xl p-6 border border-dark-border shadow-lg hover:border-brand-accent transition-all cursor-pointer">
+                    <div class="text-brand-accent mb-2"><i class="fas fa-shield-alt fa-2x"></i></div>
+                    <h3 class="text-3xl font-bold text-white mb-1">0%</h3>
+                    <p class="text-sm text-slate-400">Morosidad vs KPI 10%</p>
+                </div>
+                <div class="bg-dark-card rounded-xl p-6 border border-dark-border shadow-lg hover:border-purple-500 transition-all cursor-pointer">
+                    <div class="text-purple-500 mb-2"><i class="fas fa-project-diagram fa-2x"></i></div>
+                    <h3 class="text-3xl font-bold text-white mb-1">-10%</h3>
+                    <p class="text-sm text-slate-400">CAPEX/OPEX ($250K+)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CASOS DE ÉXITO -->
+    <section id="casos-exito" class="py-20 bg-slate-900/50 border-y border-dark-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="text-3xl font-bold text-white sm:text-4xl">📊 Casos de Éxito</h2>
+                <p class="mt-4 text-lg text-slate-400">Análisis técnico de proyectos con impacto medible.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-dark-card rounded-xl p-8 border border-dark-border hover:border-brand-DEFAULT transition-all fade-in-up">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-brand-DEFAULT/20 rounded-lg flex items-center justify-center mr-4">
+                            <i class="fas fa-briefcase text-brand-DEFAULT text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white">Cartera Crediticia $5.1 MDP</h3>
+                            <p class="text-sm text-slate-400">Aspiria | Dic 2025 - Actualidad</p>
+                        </div>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="bg-dark-bg p-3 rounded text-sm text-slate-300">
+                            <strong>✅ 500+ empresas</strong> analizadas con 95% precisión
+                        </div>
+                        <div class="bg-dark-bg p-3 rounded text-sm text-slate-300">
+                            <strong>✅ Modelo Python</strong> con Pandas y Scikit-learn
+                        </div>
+                        <div class="bg-dark-bg p-3 rounded text-sm text-slate-300">
+                            <strong>✅ 0% PAR 30/90</strong> vs KPI 10%
+                        </div>
+                        <div class="bg-brand-DEFAULT/10 p-3 rounded border border-brand-DEFAULT/30 text-sm">
+                            <strong class="text-brand-DEFAULT">Impacto:</strong> $0 de morosidad en cartera
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-dark-card rounded-xl p-8 border border-dark-border hover:border-brand-accent transition-all fade-in-up">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-brand-accent/20 rounded-lg flex items-center justify-center mr-4">
+                            <i class="fas fa-building text-brand-accent text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white">Negociación & P&L</h3>
+                            <p class="text-sm text-slate-400">Nekar Construcciones | Oct 2023 - Feb 2025</p>
+                        </div>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="bg-dark-bg p-3 rounded text-sm text-slate-300">
+                            <strong>✅ 15+ proveedores</strong> negociados
+                        </div>
+                        <div class="bg-dark-bg p-3 rounded text-sm text-slate-300">
+                            <strong>✅ -10% CAPEX</strong> en costos operativos
+                        </div>
+                        <div class="bg-dark-bg p-3 rounded text-sm text-slate-300">
+                            <strong>✅ Dashboard P&L</strong> en tiempo real
+                        </div>
+                        <div class="bg-brand-accent/10 p-3 rounded border border-brand-accent/30 text-sm">
+                            <strong class="text-brand-accent">Impacto:</strong> $250K+ ahorrados
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TECH PROJECTS -->
+    <section id="proyectos" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="text-3xl font-bold text-white sm:text-4xl">🔧 Tech Projects</h2>
+                <p class="mt-4 text-lg text-slate-400">Proyectos de data science y análisis financiero.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <a href="https://github.com/EverRubio" target="_blank" class="bg-dark-card rounded-xl p-6 border border-dark-border hover:border-brand-DEFAULT transition-all fade-in-up">
+                    <i class="fab fa-python text-yellow-400 text-3xl mb-3"></i>
+                    <h3 class="text-lg font-bold text-white mb-2">Credit Risk Scoring</h3>
+                    <p class="text-sm text-slate-400">Python model con 95% precisión</p>
+                </a>
+
+                <a href="https://github.com/EverRubio" target="_blank" class="bg-dark-card rounded-xl p-6 border border-dark-border hover:border-brand-DEFAULT transition-all fade-in-up">
+                    <i class="fas fa-database text-blue-400 text-3xl mb-3"></i>
+                    <h3 class="text-lg font-bold text-white mb-2">Financial Dashboard</h3>
+                    <p class="text-sm text-slate-400">SQL + Power BI</p>
+                </a>
+
+                <a href="https://github.com/EverRubio" target="_blank" class="bg-dark-card rounded-xl p-6 border border-dark-border hover:border-brand-DEFAULT transition-all fade-in-up">
+                    <i class="fas fa-chart-bar text-green-400 text-3xl mb-3"></i>
+                    <h3 class="text-lg font-bold text-white mb-2">Análisis de Rentabilidad</h3>
+                    <p class="text-sm text-slate-400">B2B Financial Tool</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCIA -->
+    <section id="experiencia" class="py-20 bg-slate-900/50 border-y border-dark-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="text-3xl font-bold text-white sm:text-4xl">Experiencia</h2>
+            </div>
+
+            <div class="space-y-8">
+                <div class="bg-dark-card rounded-xl p-6 border border-dark-border fade-in-up">
+                    <h3 class="text-xl font-bold text-white mb-2">Aspiria - Analista de Riesgo Crediticio II</h3>
+                    <p class="text-sm text-slate-400 mb-3">Dic 2025 - Actualidad | Guadalajara</p>
+                    <ul class="text-sm text-slate-300 space-y-2">
+                        <li>• $5.1 MDP en cartera con 0% morosidad</li>
+                        <li>• 500+ análisis de empresas con 95% precisión</li>
+                        <li>• Modelo de scoring en Python</li>
+                    </ul>
+                </div>
+
+                <div class="bg-dark-card rounded-xl p-6 border border-dark-border fade-in-up">
+                    <h3 class="text-xl font-bold text-white mb-2">Nekar Construcciones - Coordinador de Operaciones</h3>
+                    <p class="text-sm text-slate-400 mb-3">Oct 2023 - Feb 2025 | Culiacán</p>
+                    <ul class="text-sm text-slate-300 space-y-2">
+                        <li>• Control P&L de proyectos de infraestructura</li>
+                        <li>• -10% reducción en CAPEX ($250K+)</li>
+                        <li>• Negociación con 7 stakeholders gubernamentales</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <footer id="contacto" class="bg-dark-bg pt-20 pb-10 relative overflow-hidden">
+        <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 w-[800px] h-[300px] bg-brand-DEFAULT/20 filter blur-[100px] rounded-full"></div>
+        
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 fade-in-up">
+            <h2 class="text-3xl font-bold text-white mb-6">¿Explorando talento en Finanzas?</h2>
+            <p class="text-lg text-slate-400 mb-8">Disponible para Banca de Inversión, Venture Capital y análisis financiero.</p>
+            
+            <div class="flex flex-wrap justify-center gap-6 mb-12">
+                <a href="mailto:joseeverrubiovillalpando@gmail.com" class="flex items-center gap-2 text-slate-300 hover:text-white bg-dark-card px-6 py-3 rounded-full border border-dark-border hover:border-brand-DEFAULT transition-colors">
+                    <i class="fas fa-envelope text-brand-DEFAULT"></i> Email
+                </a>
+                <a href="https://www.linkedin.com/in/EverRubio" target="_blank" class="flex items-center gap-2 text-slate-300 hover:text-white bg-dark-card px-6 py-3 rounded-full border border-dark-border hover:border-brand-DEFAULT transition-colors">
+                    <i class="fab fa-linkedin text-[#0A66C2]"></i> LinkedIn
+                </a>
+                <a href="https://github.com/EverRubio" target="_blank" class="flex items-center gap-2 text-slate-300 hover:text-white bg-dark-card px-6 py-3 rounded-full border border-dark-border hover:border-brand-DEFAULT transition-colors">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+            </div>
+
+            <div class="mt-16 pt-8 border-t border-dark-border">
+                <p class="text-slate-500 text-sm">&copy; 2026 José Ever Rubio Villalpando</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.15
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
+
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('shadow-lg', 'bg-dark-bg/90');
+                    navbar.classList.remove('glass-effect');
+                } else {
+                    navbar.classList.remove('shadow-lg', 'bg-dark-bg/90');
+                    navbar.classList.add('glass-effect');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
